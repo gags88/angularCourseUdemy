@@ -125,5 +125,5 @@ fieldset[disabled] .btn {
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     transition: all 0.4s;
-    font-weight: 600;
+    font-weight: 500;
 }

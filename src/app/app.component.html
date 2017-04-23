@@ -1,9 +1,38 @@
 <app-header></app-header>
 <div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <app-recipes></app-recipes>
-            <app-shopping-list></app-shopping-list>
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4>Recipe and Shopping List</h4>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <app-recipes></app-recipes>
+                    <app-shopping-list></app-shopping-list>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4>Servers</h4>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-12">
+                    <app-cockpit (srvCreated)="onServerAdded($event)" (bpCreated)="onBluePrintAdded($event)"></app-cockpit>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <app-server-elements *ngFor="let serverElement of serverElements" [srvElement]="serverElement">
+                        <!-- ng-content Example -->
+                        <p [ngStyle]="{color: serverElement.type === 'blueprint' ? 'dodgerblue' : 'red'}">{{serverElement.content}}</p>
+                    </app-server-elements>
+                </div>
+            </div>
         </div>
     </div>
 </div>
