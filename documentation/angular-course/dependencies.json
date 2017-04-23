@@ -1,0 +1,408 @@
+[
+  {
+    "name": "AppRoutingModule",
+    "file": "__path__/app/app-routing.module.ts",
+    "providers": [],
+    "declarations": [],
+    "imports": [
+      {
+        "ns": "RouterModule",
+        "name": "RouterModule.forRoot(args)"
+      }
+    ],
+    "exports": [
+      {
+        "name": "RouterModule"
+      }
+    ],
+    "bootstrap": [],
+    "__raw": [
+      {
+        "kind": 248,
+        "pos": 178,
+        "end": 220,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 178,
+          "end": 188,
+          "flags": 0,
+          "text": "imports"
+        },
+        "initializer": {
+          "kind": 167,
+          "pos": 189,
+          "end": 220,
+          "flags": 0,
+          "elements": [
+            {
+              "kind": 171,
+              "pos": 191,
+              "end": 219,
+              "flags": 0,
+              "expression": {
+                "kind": 169,
+                "pos": 191,
+                "end": 211,
+                "flags": 0,
+                "expression": {
+                  "kind": 69,
+                  "pos": 191,
+                  "end": 203,
+                  "flags": 0,
+                  "text": "RouterModule"
+                },
+                "dotToken": {
+                  "kind": 21,
+                  "pos": 203,
+                  "end": 204,
+                  "flags": 0
+                },
+                "name": {
+                  "kind": 69,
+                  "pos": 204,
+                  "end": 211,
+                  "flags": 0,
+                  "text": "forRoot"
+                }
+              },
+              "arguments": [
+                {
+                  "kind": 69,
+                  "pos": 212,
+                  "end": 218,
+                  "flags": 0,
+                  "text": "routes"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "kind": 248,
+        "pos": 221,
+        "end": 247,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 221,
+          "end": 231,
+          "flags": 0,
+          "text": "exports"
+        },
+        "initializer": {
+          "kind": 167,
+          "pos": 232,
+          "end": 247,
+          "flags": 0,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 234,
+              "end": 246,
+              "flags": 0,
+              "text": "RouterModule"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "AppModule",
+    "file": "src/app/app.module.ts",
+    "providers": [],
+    "declarations": [
+      {
+        "name": "AppComponent",
+        "file": "src/app/app.component.ts",
+        "selector": "app-root",
+        "providers": [],
+        "templateUrl": [
+          "app.component.html"
+        ],
+        "styleUrls": [
+          "app.component.css"
+        ],
+        "__raw": [
+          {
+            "kind": 248,
+            "pos": 56,
+            "end": 79,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 56,
+              "end": 67,
+              "flags": 0,
+              "text": "selector"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 68,
+              "end": 79,
+              "flags": 0,
+              "text": "app-root"
+            }
+          },
+          {
+            "kind": 248,
+            "pos": 80,
+            "end": 118,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 80,
+              "end": 94,
+              "flags": 0,
+              "text": "templateUrl"
+            },
+            "initializer": {
+              "kind": 9,
+              "pos": 95,
+              "end": 118,
+              "flags": 0,
+              "text": "./app.component.html"
+            }
+          },
+          {
+            "kind": 248,
+            "pos": 119,
+            "end": 156,
+            "flags": 0,
+            "name": {
+              "kind": 69,
+              "pos": 119,
+              "end": 131,
+              "flags": 0,
+              "text": "styleUrls"
+            },
+            "initializer": {
+              "kind": 167,
+              "pos": 132,
+              "end": 156,
+              "flags": 0,
+              "elements": [
+                {
+                  "kind": 9,
+                  "pos": 134,
+                  "end": 155,
+                  "flags": 0,
+                  "text": "./app.component.css"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "HeaderComponent"
+      },
+      {
+        "name": "RecipesComponent"
+      },
+      {
+        "name": "RecipesListComponent"
+      },
+      {
+        "name": "RecipesDetailComponent"
+      },
+      {
+        "name": "RecipesItemComponent"
+      },
+      {
+        "name": "ShoppingListComponent"
+      },
+      {
+        "name": "ShoppingListEditComponent"
+      }
+    ],
+    "imports": [
+      {
+        "name": "BrowserModule"
+      },
+      {
+        "name": "FormsModule"
+      },
+      {
+        "name": "HttpModule"
+      }
+    ],
+    "exports": [],
+    "bootstrap": [
+      {
+        "name": "AppComponent"
+      }
+    ],
+    "__raw": [
+      {
+        "kind": 248,
+        "pos": 844,
+        "end": 1064,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 844,
+          "end": 859,
+          "flags": 0,
+          "text": "declarations"
+        },
+        "initializer": {
+          "kind": 167,
+          "pos": 860,
+          "end": 1064,
+          "flags": 1024,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 862,
+              "end": 879,
+              "flags": 0,
+              "text": "AppComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 880,
+              "end": 900,
+              "flags": 0,
+              "text": "HeaderComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 901,
+              "end": 922,
+              "flags": 0,
+              "text": "RecipesComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 923,
+              "end": 948,
+              "flags": 0,
+              "text": "RecipesListComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 949,
+              "end": 976,
+              "flags": 0,
+              "text": "RecipesDetailComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 977,
+              "end": 1002,
+              "flags": 0,
+              "text": "RecipesItemComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 1003,
+              "end": 1029,
+              "flags": 0,
+              "text": "ShoppingListComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 1030,
+              "end": 1060,
+              "flags": 0,
+              "text": "ShoppingListEditComponent"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 248,
+        "pos": 1065,
+        "end": 1133,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 1065,
+          "end": 1075,
+          "flags": 0,
+          "text": "imports"
+        },
+        "initializer": {
+          "kind": 167,
+          "pos": 1076,
+          "end": 1133,
+          "flags": 1024,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 1078,
+              "end": 1096,
+              "flags": 0,
+              "text": "BrowserModule"
+            },
+            {
+              "kind": 69,
+              "pos": 1097,
+              "end": 1113,
+              "flags": 0,
+              "text": "FormsModule"
+            },
+            {
+              "kind": 69,
+              "pos": 1114,
+              "end": 1129,
+              "flags": 0,
+              "text": "HttpModule"
+            }
+          ]
+        }
+      },
+      {
+        "kind": 248,
+        "pos": 1134,
+        "end": 1150,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 1134,
+          "end": 1146,
+          "flags": 0,
+          "text": "providers"
+        },
+        "initializer": {
+          "kind": 167,
+          "pos": 1147,
+          "end": 1150,
+          "flags": 0,
+          "elements": []
+        }
+      },
+      {
+        "kind": 248,
+        "pos": 1151,
+        "end": 1179,
+        "flags": 0,
+        "name": {
+          "kind": 69,
+          "pos": 1151,
+          "end": 1163,
+          "flags": 0,
+          "text": "bootstrap"
+        },
+        "initializer": {
+          "kind": 167,
+          "pos": 1164,
+          "end": 1179,
+          "flags": 0,
+          "elements": [
+            {
+              "kind": 69,
+              "pos": 1166,
+              "end": 1178,
+              "flags": 0,
+              "text": "AppComponent"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
