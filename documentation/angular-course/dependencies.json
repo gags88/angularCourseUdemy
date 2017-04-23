@@ -128,66 +128,66 @@
         "__raw": [
           {
             "kind": 248,
-            "pos": 56,
-            "end": 79,
+            "pos": 54,
+            "end": 74,
             "flags": 0,
             "name": {
               "kind": 69,
-              "pos": 56,
-              "end": 67,
+              "pos": 54,
+              "end": 62,
               "flags": 0,
               "text": "selector"
             },
             "initializer": {
               "kind": 9,
-              "pos": 68,
-              "end": 79,
+              "pos": 63,
+              "end": 74,
               "flags": 0,
               "text": "app-root"
             }
           },
           {
             "kind": 248,
-            "pos": 80,
-            "end": 118,
+            "pos": 75,
+            "end": 111,
             "flags": 0,
             "name": {
               "kind": 69,
-              "pos": 80,
-              "end": 94,
+              "pos": 75,
+              "end": 87,
               "flags": 0,
               "text": "templateUrl"
             },
             "initializer": {
               "kind": 9,
-              "pos": 95,
-              "end": 118,
+              "pos": 88,
+              "end": 111,
               "flags": 0,
               "text": "./app.component.html"
             }
           },
           {
             "kind": 248,
-            "pos": 119,
-            "end": 156,
+            "pos": 112,
+            "end": 147,
             "flags": 0,
             "name": {
               "kind": 69,
-              "pos": 119,
-              "end": 131,
+              "pos": 112,
+              "end": 122,
               "flags": 0,
               "text": "styleUrls"
             },
             "initializer": {
               "kind": 167,
-              "pos": 132,
-              "end": 156,
+              "pos": 123,
+              "end": 147,
               "flags": 0,
               "elements": [
                 {
                   "kind": 9,
-                  "pos": 134,
-                  "end": 155,
+                  "pos": 125,
+                  "end": 146,
                   "flags": 0,
                   "text": "./app.component.css"
                 }
@@ -216,6 +216,12 @@
       },
       {
         "name": "ShoppingListEditComponent"
+      },
+      {
+        "name": "CockpitComponent"
+      },
+      {
+        "name": "ServerElementsComponent"
       }
     ],
     "imports": [
@@ -238,117 +244,131 @@
     "__raw": [
       {
         "kind": 248,
-        "pos": 844,
-        "end": 1064,
+        "pos": 1025,
+        "end": 1296,
         "flags": 0,
         "name": {
           "kind": 69,
-          "pos": 844,
-          "end": 859,
+          "pos": 1025,
+          "end": 1040,
           "flags": 0,
           "text": "declarations"
         },
         "initializer": {
           "kind": 167,
-          "pos": 860,
-          "end": 1064,
+          "pos": 1041,
+          "end": 1296,
           "flags": 1024,
           "elements": [
             {
               "kind": 69,
-              "pos": 862,
-              "end": 879,
+              "pos": 1043,
+              "end": 1060,
               "flags": 0,
               "text": "AppComponent"
             },
             {
               "kind": 69,
-              "pos": 880,
-              "end": 900,
+              "pos": 1061,
+              "end": 1081,
               "flags": 0,
               "text": "HeaderComponent"
             },
             {
               "kind": 69,
-              "pos": 901,
-              "end": 922,
+              "pos": 1082,
+              "end": 1103,
               "flags": 0,
               "text": "RecipesComponent"
             },
             {
               "kind": 69,
-              "pos": 923,
-              "end": 948,
+              "pos": 1104,
+              "end": 1129,
               "flags": 0,
               "text": "RecipesListComponent"
             },
             {
               "kind": 69,
-              "pos": 949,
-              "end": 976,
+              "pos": 1130,
+              "end": 1157,
               "flags": 0,
               "text": "RecipesDetailComponent"
             },
             {
               "kind": 69,
-              "pos": 977,
-              "end": 1002,
+              "pos": 1158,
+              "end": 1183,
               "flags": 0,
               "text": "RecipesItemComponent"
             },
             {
               "kind": 69,
-              "pos": 1003,
-              "end": 1029,
+              "pos": 1184,
+              "end": 1210,
               "flags": 0,
               "text": "ShoppingListComponent"
             },
             {
               "kind": 69,
-              "pos": 1030,
-              "end": 1060,
+              "pos": 1211,
+              "end": 1241,
               "flags": 0,
               "text": "ShoppingListEditComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 1242,
+              "end": 1263,
+              "flags": 0,
+              "text": "CockpitComponent"
+            },
+            {
+              "kind": 69,
+              "pos": 1264,
+              "end": 1292,
+              "flags": 0,
+              "text": "ServerElementsComponent"
             }
           ]
         }
       },
       {
         "kind": 248,
-        "pos": 1065,
-        "end": 1133,
+        "pos": 1297,
+        "end": 1365,
         "flags": 0,
         "name": {
           "kind": 69,
-          "pos": 1065,
-          "end": 1075,
+          "pos": 1297,
+          "end": 1307,
           "flags": 0,
           "text": "imports"
         },
         "initializer": {
           "kind": 167,
-          "pos": 1076,
-          "end": 1133,
+          "pos": 1308,
+          "end": 1365,
           "flags": 1024,
           "elements": [
             {
               "kind": 69,
-              "pos": 1078,
-              "end": 1096,
+              "pos": 1310,
+              "end": 1328,
               "flags": 0,
               "text": "BrowserModule"
             },
             {
               "kind": 69,
-              "pos": 1097,
-              "end": 1113,
+              "pos": 1329,
+              "end": 1345,
               "flags": 0,
               "text": "FormsModule"
             },
             {
               "kind": 69,
-              "pos": 1114,
-              "end": 1129,
+              "pos": 1346,
+              "end": 1361,
               "flags": 0,
               "text": "HttpModule"
             }
@@ -357,46 +377,46 @@
       },
       {
         "kind": 248,
-        "pos": 1134,
-        "end": 1150,
+        "pos": 1366,
+        "end": 1382,
         "flags": 0,
         "name": {
           "kind": 69,
-          "pos": 1134,
-          "end": 1146,
+          "pos": 1366,
+          "end": 1378,
           "flags": 0,
           "text": "providers"
         },
         "initializer": {
           "kind": 167,
-          "pos": 1147,
-          "end": 1150,
+          "pos": 1379,
+          "end": 1382,
           "flags": 0,
           "elements": []
         }
       },
       {
         "kind": 248,
-        "pos": 1151,
-        "end": 1179,
+        "pos": 1383,
+        "end": 1411,
         "flags": 0,
         "name": {
           "kind": 69,
-          "pos": 1151,
-          "end": 1163,
+          "pos": 1383,
+          "end": 1395,
           "flags": 0,
           "text": "bootstrap"
         },
         "initializer": {
           "kind": 167,
-          "pos": 1164,
-          "end": 1179,
+          "pos": 1396,
+          "end": 1411,
           "flags": 0,
           "elements": [
             {
               "kind": 69,
-              "pos": 1166,
-              "end": 1178,
+              "pos": 1398,
+              "end": 1410,
               "flags": 0,
               "text": "AppComponent"
             }
