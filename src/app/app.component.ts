@@ -5,6 +5,11 @@ export class AppComponent {
   serverElements = [];
   oddNumbers :  number[] = [];
   evenNumbers :  number[] = [];
+  selectedOption: string = 'recipe';
+
+  onNavigate(selectedOption: string){
+    this.selectedOption = selectedOption;
+  }
 
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({

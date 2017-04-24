@@ -1,5 +1,5 @@
-<app-header></app-header>
-<div class="container">
+<app-header (selectedNavOption)="onNavigate($event)"></app-header>
+<div class="container" *ngIf="selectedOption === 'recipe' || selectedOption === 'shopping'">
     <div class="panel panel-warning">
         <div class="panel-heading">
             <h4>Recipe and Shopping List</h4>
@@ -7,14 +7,14 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-12">
-                    <app-recipes></app-recipes>
-                    <app-shopping-list></app-shopping-list>
+                    <app-recipes *ngIf="selectedOption === 'recipe'"></app-recipes>
+                    <app-shopping-list *ngIf="selectedOption === 'shopping'"></app-shopping-list>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container" *ngIf="selectedOption === 'server'">
     <div class="panel panel-info">
         <div class="panel-heading">
             <h4>Servers</h4>
@@ -36,7 +36,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container" *ngIf="selectedOption === 'game'">
     <div class="panel panel-danger">
         <div class="panel-heading">
             <h4>Game Control</h4>
