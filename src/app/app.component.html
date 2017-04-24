@@ -36,3 +36,23 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h4>Game Control</h4>
+        </div>
+        <div class="panel-body">
+            <app-game-control (startGame)="onGameStarted($event)"></app-game-control>
+            <div class="row">
+                <div class="col-sm-2">
+                    <hr/>
+                    <app-game-odd *ngFor="let oddNumber of oddNumbers" [oddNumber]="oddNumber"></app-game-odd>
+                </div>
+                <div class="col-sm-2">
+                    <hr/>
+                    <app-game-even *ngFor="let evenNumber of evenNumbers" [evenNumber]="evenNumber"></app-game-even>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
