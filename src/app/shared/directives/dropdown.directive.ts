@@ -1,4 +1,4 @@
-import { Directive, HostListener, ElementRef, Renderer2 } from '@angular/core';
+import { Directive, HostListener, ElementRef, Renderer2, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[appDropdown]'
@@ -7,9 +7,9 @@ export class DropdownDirective {
 
   constructor(private getElement: ElementRef, private renderer: Renderer2) { }
 
-  @HostListener('mouseenter') click(eventData: Event){
-    console.log("Clicked");
-    
+  @HostListener('click') click(eventData: Event){
+    const el = this.getElement.nativeElement.parentElement;
+    el.classList.toggle("open")
   }
 
 }
