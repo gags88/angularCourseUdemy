@@ -16,6 +16,7 @@ import { ServerElementsComponent } from './serverExercise/server-elements/server
 import { GameControlComponent } from './game-assignment/game-control/game-control.component';
 import { GameOddComponent } from './game-assignment/game-odd/game-odd.component';
 import { GameEvenComponent } from './game-assignment/game-even/game-even.component';
+import { BasicHighlightDirective } from './shared/directives/basic-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { GameEvenComponent } from './game-assignment/game-even/game-even.compone
     ServerElementsComponent,
     GameControlComponent,
     GameOddComponent,
-    GameEvenComponent
+    GameEvenComponent,
+    BasicHighlightDirective
   ],
   imports: [
     BrowserModule,
