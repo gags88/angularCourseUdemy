@@ -17,6 +17,7 @@ import { GameControlComponent } from './game-assignment/game-control/game-contro
 import { GameOddComponent } from './game-assignment/game-odd/game-odd.component';
 import { GameEvenComponent } from './game-assignment/game-even/game-even.component';
 import { BasicHighlightDirective } from './shared/directives/basic-highlight.directive';
+import { DropdownDirective } from './src/app/shared/directives/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BasicHighlightDirective } from './shared/directives/basic-highlight.dir
     GameControlComponent,
     GameOddComponent,
     GameEvenComponent,
-    BasicHighlightDirective
+    BasicHighlightDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
