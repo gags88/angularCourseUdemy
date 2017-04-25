@@ -1,5 +1,5 @@
-<app-header></app-header>
-<div class="container">
+<app-header (selectedNavOption)="onNavigate($event)"></app-header>
+<div class="container" *ngIf="selectedOption === 'recipe' || selectedOption === 'shopping'">
     <div class="panel panel-warning">
         <div class="panel-heading">
             <h4>Recipe and Shopping List</h4>
@@ -7,14 +7,16 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-12">
-                    <app-recipes></app-recipes>
-                    <app-shopping-list></app-shopping-list>
+                    <app-recipes *ngIf="selectedOption === 'recipe'"></app-recipes>
+                    <app-shopping-list *ngIf="selectedOption === 'shopping'"></app-shopping-list>
+                    <hr/>
+                    <p appBasicHighlight [highlightColor]="'rgb(251,38,38)'">Highlight with own directive</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container" *ngIf="selectedOption === 'server'">
     <div class="panel panel-info">
         <div class="panel-heading">
             <h4>Servers</h4>
@@ -31,6 +33,26 @@
                         <!-- ng-content Example -->
                         <p [ngStyle]="{color: serverElement.type === 'blueprint' ? 'dodgerblue' : 'red'}">{{serverElement.content}}</p>
                     </app-server-elements>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="selectedOption === 'game'">
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <h4>Game Control</h4>
+        </div>
+        <div class="panel-body">
+            <app-game-control (startGame)="onGameStarted($event)"></app-game-control>
+            <div class="row">
+                <div class="col-sm-2">
+                    <hr/>
+                    <app-game-odd *ngFor="let oddNumber of oddNumbers" [oddNumber]="oddNumber"></app-game-odd>
+                </div>
+                <div class="col-sm-2">
+                    <hr/>
+                    <app-game-even *ngFor="let evenNumber of evenNumbers" [evenNumber]="evenNumber"></app-game-even>
                 </div>
             </div>
         </div>

@@ -1,3 +1,19 @@
-<p>
-  recipes-item works!
-</p>
+<a href="#" class="list-group-item clearfix" *ngFor="let recipe of itemData" (click)="onRecipeSelected(recipe)">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+        <p class="list-group-item-text">{{recipe.description}}</p>
+    </div>
+    <span class="pull-right">
+          <img [src]="recipe.imagePath" alt="{{recipe.name}}" class="img-responsive"  style="max-height: 50px"/>
+    </span>
+</a>
+
+<!--<a href="#" class="list-group-item clearfix">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{itemData.name}}</h4>
+        <p class="list-group-item-text">{{itemData.description}}</p>
+    </div>
+    <span class="pull-right">
+          <img [src]="itemData.imagePath" alt="{{itemData.name}}" class="img-responsive"  style="max-height: 50px"/>
+    </span>
+</a>-->

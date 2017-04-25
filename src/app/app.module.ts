@@ -13,6 +13,11 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/shopping-list-edit.component';
 import { CockpitComponent } from './serverExercise/cockpit/cockpit.component';
 import { ServerElementsComponent } from './serverExercise/server-elements/server-elements.component';
+import { GameControlComponent } from './game-assignment/game-control/game-control.component';
+import { GameOddComponent } from './game-assignment/game-odd/game-odd.component';
+import { GameEvenComponent } from './game-assignment/game-even/game-even.component';
+import { BasicHighlightDirective } from './shared/directives/basic-highlight.directive';
+import { DropdownDirective } from './src/app/shared/directives/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { ServerElementsComponent } from './serverExercise/server-elements/server
     ShoppingListComponent,
     ShoppingListEditComponent,
     CockpitComponent,
-    ServerElementsComponent
+    ServerElementsComponent,
+    GameControlComponent,
+    GameOddComponent,
+    GameEvenComponent,
+    BasicHighlightDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
