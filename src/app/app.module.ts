@@ -18,6 +18,10 @@ import { GameOddComponent } from './game-assignment/game-odd/game-odd.component'
 import { GameEvenComponent } from './game-assignment/game-even/game-even.component';
 import { BasicHighlightDirective } from './shared/directives/basic-highlight.directive';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
+import { ActiveUsersComponent } from './serviceExercise/active-users/active-users.component';
+import { InactiveUsersComponent } from './serviceExercise/inactive-users/inactive-users.component';
+import { UserService } from "./shared/services/user.service";
+import { CounterService } from "./shared/services/counter.service";
 
 @NgModule({
   declarations: [
@@ -36,13 +40,15 @@ import { DropdownDirective } from './shared/directives/dropdown.directive';
     GameEvenComponent,
     BasicHighlightDirective,
     DropdownDirective,
+    ActiveUsersComponent,
+    InactiveUsersComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [UserService, CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

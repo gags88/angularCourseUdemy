@@ -58,3 +58,14 @@
         </div>
     </div>
 </div>
+<div class="container" *ngIf="selectedOption === 'service'">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>Service Assigment</h4>
+        </div>
+        <div class="panel-body">
+            <app-active-users></app-active-users>
+            <app-inactive-users></app-inactive-users>
+        </div>
+    </div>
+</div>

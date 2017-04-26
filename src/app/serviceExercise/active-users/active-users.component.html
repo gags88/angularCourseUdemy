@@ -1,0 +1,4 @@
+<h3>Active Users <i class="mi mi-radio-button-checked mi-18 mi-success"></i></h3>
+<div class="list-group">
+    <div *ngFor="let user of activeUsers; let i=index" class="list-group-item">{{user}} <a href="#" class="pull-right" (click)="onSetToInactive(i)">Change to Inactive</a></div>
+</div>
