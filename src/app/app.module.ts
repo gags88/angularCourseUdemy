@@ -22,6 +22,8 @@ import { ActiveUsersComponent } from './serviceExercise/active-users/active-user
 import { InactiveUsersComponent } from './serviceExercise/inactive-users/inactive-users.component';
 import { UserService } from "./shared/services/user.service";
 import { CounterService } from "./shared/services/counter.service";
+import { RecipeService } from "./recipes/recipe.service";
+import { ShoppingListService } from "./shopping-list/shopping-list.service";
 
 @NgModule({
   declarations: [
@@ -48,7 +50,12 @@ import { CounterService } from "./shared/services/counter.service";
     FormsModule,
     HttpModule
   ],
-  providers: [UserService, CounterService],
+  providers: [
+    UserService, 
+    CounterService, 
+    RecipeService, 
+    ShoppingListService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
