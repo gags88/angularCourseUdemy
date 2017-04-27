@@ -7,6 +7,7 @@
 <div class="row">
     <div class="col-xs-12">
         <!--<app-recipes-item *ngFor="let recipe of recipes" [itemData]="recipe"></app-recipes-item>-->
-        <app-recipes-item [itemData]="recipes" (selectedRecipe)="onRecipeSelected($event)"></app-recipes-item>
+        <!-- Commented to use direct from service <app-recipes-item [itemData]="recipes" (selectedRecipe)="onRecipeSelected($event)"></app-recipes-item>-->
+        <app-recipes-item [itemData]="recipes"></app-recipes-item>
     </div>
 </div>
