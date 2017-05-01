@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,6 +25,8 @@ import { UserService } from "./shared/services/user.service";
 import { CounterService } from "./shared/services/counter.service";
 import { RecipeService } from "./recipes/recipe.service";
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
+import { routing } from "./app.routing";
+import { ErrorpageComponent } from './errorpage/errorpage.component';
 
 @NgModule({
   declarations: [
@@ -44,11 +47,13 @@ import { ShoppingListService } from "./shopping-list/shopping-list.service";
     DropdownDirective,
     ActiveUsersComponent,
     InactiveUsersComponent,
+    ErrorpageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [
     UserService, 
