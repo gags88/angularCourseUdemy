@@ -28,6 +28,7 @@ import { ShoppingListService } from "./shopping-list/shopping-list.service";
 import { routing } from "./app.routing";
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
     ActiveUsersComponent,
     InactiveUsersComponent,
     ErrorpageComponent,
-    RecipeStartComponent
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,

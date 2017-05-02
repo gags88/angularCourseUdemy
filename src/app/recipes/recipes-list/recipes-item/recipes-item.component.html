@@ -1,4 +1,4 @@
-<a class="list-group-item clearfix" *ngFor="let recipe of itemData; let i = index" [routerLink]="[i]" style="cursor: pointer">
+<a class="list-group-item clearfix" *ngFor="let recipe of itemData; let i = index" [routerLink]="[i]" style="cursor: pointer" routerLinkActive="active">
     <!--(click)="onRecipeSelected(recipe)"-->
     <div class="pull-left">
         <h4 class="list-group-item-heading">{{recipe.name}}</h4>

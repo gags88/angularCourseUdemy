@@ -16,7 +16,7 @@
             <a style="cursor: pointer" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" appDropdown><span class="caret"></span></a>
             <ul class="dropdown-menu open">
                 <li><a style="cursor: pointer" (click)="onAddToShoppingList()">Add to Cart</a></li>
-                <li><a style="cursor: pointer">Edit Recipe</a></li>
+                <li><a style="cursor: pointer" [routerLink]="['edit']">Edit Recipe</a></li>
                 <li><a style="cursor: pointer">Delete Recipe</a></li>
             </ul>
         </div>
