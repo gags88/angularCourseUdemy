@@ -20,13 +20,18 @@ export class FormComponent implements OnInit {
 
   onSuggestUsername(){
     const userName = "SuperUser";
-    this.theForm.setValue({
+    // this.theForm.setValue({
+    //   userData: {
+    //     username: userName,
+    //     email: '',
+    //     secret: 'pet',
+    //     questionAnswer: '',
+    //     gender: 'Male'
+    //   }
+    // })
+    this.theForm.form.patchValue({
       userData: {
-        username: userName,
-        email: '',
-        secret: 'pet',
-        questionAnswer: '',
-        gender: 'Male'
+        username: userName
       }
     })
 
