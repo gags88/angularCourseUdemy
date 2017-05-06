@@ -29,6 +29,7 @@ import { routing } from "./app.routing";
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { ToggleDirective } from "./shared/directives/toggle.directive";
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     InactiveUsersComponent,
     ErrorpageComponent,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    ToggleDirective
   ],
   imports: [
     BrowserModule,
@@ -60,9 +62,9 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     routing
   ],
   providers: [
-    UserService, 
-    CounterService, 
-    RecipeService, 
+    UserService,
+    CounterService,
+    RecipeService,
     ShoppingListService
   ],
   bootstrap: [AppComponent]
