@@ -7,7 +7,7 @@ export class ToggleDirective {
 
   constructor(private elRef: ElementRef, private renderer: Renderer2) { }
 
-  @HostListener('click') onClick(eventData: Event){
+  @HostListener('click') onClick(){
     var classNameStr = this.elRef.nativeElement.className;
     if (/btn-success/.test(classNameStr)) {
       this.renderer.removeClass(this.elRef.nativeElement, 'btn-success');
