@@ -1,5 +1,10 @@
 <app-header (selectedNavOption)="onNavigate($event)"></app-header>
-<div class="container" *ngIf="selectedOption === 'recipe' || selectedOption === 'shopping'">
+<div class="container">
+    <router-outlet></router-outlet>
+    <hr/>
+    <p appBasicHighlight [highlightColor]="'rgb(251,38,38)'">Highlight with own directive</p>
+</div>
+<!--<div class="container" *ngIf="selectedOption === 'recipe' || selectedOption === 'shopping'">
     <div class="panel panel-warning">
         <div class="panel-heading">
             <h4>Recipe and Shopping List</h4>
@@ -7,17 +12,13 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-12">
-                  <app-recipes *ngIf="selectedOption === 'recipe'"></app-recipes>
-                  <app-shopping-list *ngIf="selectedOption === 'shopping'"></app-shopping-list>
-                  <hr/>
-                  <p appBasicHighlight [highlightColor]="'rgb(251,38,38)'">Highlight with own directive</p>
-                  <br/>
-                  <button type="button" class="btn btn-primary" appToggle>Toggle Class to Success</button>
+                    <app-recipes *ngIf="selectedOption === 'recipe'"></app-recipes>
+                    <app-shopping-list *ngIf="selectedOption === 'shopping'"></app-shopping-list>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <div class="container" *ngIf="selectedOption === 'server'">
     <div class="panel panel-info">
         <div class="panel-heading">
