@@ -7,10 +7,12 @@
         <div class="panel-body">
             <div class="row">
                 <div class="col-sm-12">
-                    <app-recipes *ngIf="selectedOption === 'recipe'"></app-recipes>
-                    <app-shopping-list *ngIf="selectedOption === 'shopping'"></app-shopping-list>
-                    <hr/>
-                    <p appBasicHighlight [highlightColor]="'rgb(251,38,38)'">Highlight with own directive</p>
+                  <app-recipes *ngIf="selectedOption === 'recipe'"></app-recipes>
+                  <app-shopping-list *ngIf="selectedOption === 'shopping'"></app-shopping-list>
+                  <hr/>
+                  <p appBasicHighlight [highlightColor]="'rgb(251,38,38)'">Highlight with own directive</p>
+                  <br/>
+                  <button type="button" class="btn btn-primary" appToggle>Toggle Class to Success</button>
                 </div>
             </div>
         </div>

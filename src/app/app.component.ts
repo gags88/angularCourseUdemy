@@ -1,17 +1,22 @@
-import {Component} from '@angular/core';
+import { Component } from "@angular/core";
 
-@Component({selector: 'app-root', templateUrl: './app.component.html', styleUrls: ['./app.component.css']})
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
 export class AppComponent {
   serverElements = [];
-  oddNumbers :  number[] = [];
-  evenNumbers :  number[] = [];
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
   selectedOption: string = 'recipe';
 
-  onNavigate(selectedOption: string){
+  onNavigate(selectedOption: string) {
     this.selectedOption = selectedOption;
   }
 
-  onServerAdded(serverData: {serverName: string, serverContent: string}) {
+  onServerAdded(serverData: { serverName: string, serverContent: string }) {
     this.serverElements.push({
       type: 'server',
       name: serverData.serverName,
@@ -19,7 +24,7 @@ export class AppComponent {
     });
   }
 
-  onBluePrintAdded(serverData: {serverName: string, serverContent: string}) {
+  onBluePrintAdded(serverData: { serverName: string, serverContent: string }) {
     this.serverElements.push({
       type: 'blueprint',
       name: serverData.serverName,
@@ -27,10 +32,10 @@ export class AppComponent {
     });
   }
 
-  onGameStarted(numberCount: number){
-    if(numberCount % 2 === 0){
+  onGameStarted(numberCount: number) {
+    if (numberCount % 2 === 0) {
       this.evenNumbers.push(numberCount);
-    }else{
+    } else {
       this.oddNumbers.push(numberCount);
     }
   }

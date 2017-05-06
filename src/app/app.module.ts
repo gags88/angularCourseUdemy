@@ -24,6 +24,7 @@ import { UserService } from "./shared/services/user.service";
 import { CounterService } from "./shared/services/counter.service";
 import { RecipeService } from "./recipes/recipe.service";
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
+import { ToggleDirective } from './shared/directives/toggle.directive';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ShoppingListService } from "./shopping-list/shopping-list.service";
     DropdownDirective,
     ActiveUsersComponent,
     InactiveUsersComponent,
+    ToggleDirective,
   ],
   imports: [
     BrowserModule,

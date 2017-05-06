@@ -5,7 +5,11 @@ import { Directive, HostListener, ElementRef, Renderer2, HostBinding } from '@an
 })
 export class DropdownDirective {
 
-  constructor(private getElement: ElementRef, private renderer: Renderer2) { }
+  constructor(private getElement: ElementRef, private renderer: Renderer2) {
+    renderer.listen('document', 'click', (event)=>{
+
+    })
+  }
 
   @HostListener('click') click(eventData: Event){
     const el = this.getElement.nativeElement.parentElement;

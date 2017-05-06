@@ -30,7 +30,7 @@ export class BasicHighlightDirective implements OnInit {
     // this.renderer.setStyle(this.getElement.nativeElement, "background-color", "transparent");
     // this.renderer.setStyle(this.getElement.nativeElement, "color", "#333");
     // this.renderer.setStyle(this.getElement.nativeElement, "padding", "0");
-    
+
     // this.backgroundColor = 'transparent';
     this.color = "#333";
     this.padding= "0";
@@ -41,12 +41,11 @@ export class BasicHighlightDirective implements OnInit {
     // this.renderer.setStyle(this.getElement.nativeElement, "background-color", "dodgerblue");
     // this.renderer.setStyle(this.getElement.nativeElement, "color", "#fff");
     // this.renderer.setStyle(this.getElement.nativeElement, "padding", "15px");
-    
+
     // this.backgroundColor = 'dodgerblue';
     this.color = "#fff"
     this.padding= "15px";
-
-      this.backgroundColor =  this.highlightColor;
+    this.backgroundColor =  this.highlightColor;
   }
 
 
