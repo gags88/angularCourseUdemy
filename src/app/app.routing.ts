@@ -7,6 +7,7 @@ import { RecipeStartComponent } from "./recipes/recipe-start/recipe-start.compon
 import { RecipesDetailComponent } from "./recipes/recipes-detail/recipes-detail.component";
 import { RecipeEditComponent } from "./recipes/recipe-edit/recipe-edit.component";
 import { CustomObservableComponent } from "./observable/custom-observable/custom-observable.component";
+import { FormComponent } from "./forms/form/form.component";
 
 const APP_ROUTES: Routes = [
     {path: '', redirectTo: '/recipes', pathMatch: "full"},
@@ -18,8 +19,9 @@ const APP_ROUTES: Routes = [
     ]},
     {path: 'shopping', component: ShoppingListComponent},
     {path: 'observables', component: CustomObservableComponent},
+    {path: 'forms', component: FormComponent},
     {path: 'not-found', component: ErrorpageComponent, data: {message: "Page Not Found"}},
     {path: '**', redirectTo: '/not-found'}
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
+export const ROUTING: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
