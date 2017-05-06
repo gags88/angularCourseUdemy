@@ -12,6 +12,14 @@ export class FormComponent implements OnInit {
 
   answer: string = "";
   genders = ['Male', 'Female'];
+  submitted = false;
+  user = {
+    username: '',
+    email: '',
+    secretQuestion: '',
+    answer: '',
+    gender: ''
+  }
 
   constructor() { }
 
@@ -38,7 +46,15 @@ export class FormComponent implements OnInit {
   }
 
   onFormSubmit(data: NgForm){
-    console.log(data.value);
+    this.submitted = true;
+    //console.log(data.value);
+    this.user.username = data.value.userData.username;
+    this.user.email = data.value.userData.email;
+    this.user.secretQuestion = data.value.userData.secret;
+    this.user.answer = data.value.userData.questionAnswer;
+    this.user.gender = data.value.userData.gender;
+
+    this.theForm.reset();
   }
 
 }

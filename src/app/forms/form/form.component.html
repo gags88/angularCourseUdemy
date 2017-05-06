@@ -38,6 +38,15 @@
         </form>
       </div>
     </div>
+    <hr/>
+    <div *ngIf="submitted">
+    <h3>Your Data:</h3>
+      <p>Username: {{user.username}}</p>
+      <p>Email: {{user.email}}</p>
+      <p>Secret Question: {{user.secretQuestion}}</p>
+      <p>Your Answer: {{user.answer}}</p>
+      <p>Gender: {{user.gender}}</p>
+    </div>
   </div>
   <div class="col-sm-6">
     <div class="panel panel-default">
