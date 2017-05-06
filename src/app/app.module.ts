@@ -31,6 +31,7 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { ToggleDirective } from "./shared/directives/toggle.directive";
 import { CustomObservableComponent } from './observable/custom-observable/custom-observable.component';
+import { SubjectService } from "./shared/services/subject.service";
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { CustomObservableComponent } from './observable/custom-observable/custom
     UserService,
     CounterService,
     RecipeService,
-    ShoppingListService
+    ShoppingListService,
+    SubjectService
   ],
   bootstrap: [AppComponent]
 })

@@ -3,6 +3,7 @@ import { Observable } from "rxjs/Observable";
 import { Observer } from "rxjs/Observer";
 import { Subscription } from "rxjs/Subscription";
 import "rxjs/Rx";
+import { SubjectService } from "../../shared/services/subject.service";
 
 @Component({
   selector: 'app-custom-observable',
@@ -13,8 +14,9 @@ export class CustomObservableComponent implements OnInit, OnDestroy {
   number:number;
   observable: string[] = [];
   numbersSubscription: Subscription;
+  isUserActivated = false;
 
-  constructor() { }
+  constructor(private subjectService: SubjectService) { }
 
   ngOnInit() {
     const myNumbers = Observable.interval(1000);
@@ -50,10 +52,23 @@ export class CustomObservableComponent implements OnInit, OnDestroy {
         this.observable.push(...["Completed at 8 seconds"]);
       }
     );
+
+    this.subjectService.userActivated.subscribe(
+      (id: number) => {
+        if(id === 1){
+          this.isUserActivated = true;
+        }
+      }
+    );
+
   }
 
   ngOnDestroy(){
     this.numbersSubscription.unsubscribe();
+  }
+
+  onUserActivated(id: number){
+    this.subjectService.userActivated.next(id);
   }
 
 }
