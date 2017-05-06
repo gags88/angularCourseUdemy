@@ -19,10 +19,16 @@ export class CustomObservableComponent implements OnInit, OnDestroy {
   constructor(private subjectService: SubjectService) { }
 
   ngOnInit() {
-    const myNumbers = Observable.interval(1000);
+    //const myNumbers = Observable.interval(1000);
+    const myNumbers = Observable.interval(1000)
+      .map(
+        (data: number) => {
+          return data * 2;
+        }
+      );
     this.numbersSubscription = myNumbers.subscribe(
       (number: number) => {
-        this.number = ++number;
+        this.number = number;
         console.log(this.number)
       });
 
