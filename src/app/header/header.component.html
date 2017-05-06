@@ -32,6 +32,9 @@
                 <li><a style="cursor: pointer" (click)="onSelect('server')">Server Assigment</a></li>
                 <li><a style="cursor: pointer" (click)="onSelect('game')">Game Control Assigment</a></li>
                 <li><a style="cursor: pointer" (click)="onSelect('service')">Service Assigment</a></li>
+                <li routerLinkActive="active">
+                  <a [routerLink]="['observables']">Observable Example</a>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

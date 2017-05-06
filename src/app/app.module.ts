@@ -30,6 +30,7 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { ToggleDirective } from "./shared/directives/toggle.directive";
+import { CustomObservableComponent } from './observable/custom-observable/custom-observable.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ToggleDirective } from "./shared/directives/toggle.directive";
     ErrorpageComponent,
     RecipeStartComponent,
     RecipeEditComponent,
-    ToggleDirective
+    ToggleDirective,
+    CustomObservableComponent
   ],
   imports: [
     BrowserModule,
