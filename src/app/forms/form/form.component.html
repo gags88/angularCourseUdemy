@@ -65,9 +65,8 @@
             <label for="email2">Email</label>
             <input type="email" class="form-control" id="email2" formControlName="email"/>
             <span *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched" class="help-block">
-              Please Enter Valid Email
-              <!--<span *ngIf="signupForm.get('email').errors['email']">Email is invalid.</span>-->
-              <!--<span *ngIf="signupForm.get('email').errors['required']">Email is required.</span>-->
+              <span *ngIf="signupForm.get('email').errors['email']">Email is invalid.</span>
+              <span *ngIf="signupForm.get('email').errors['emailIsForbidden']">Email has been taken.</span>
             </span>
           </div>
           <div formGroupName="ageData">
