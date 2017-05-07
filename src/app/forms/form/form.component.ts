@@ -26,6 +26,7 @@ export class FormComponent implements OnInit {
   choices = ['Good', 'Bad'];
   signupForm: FormGroup;
   forbiddenUsernames = ['Test','ABC'];
+  formStatus: string;
   /*--------Reactive Forms block Ends----------*/
 
   constructor() { }
@@ -41,6 +42,13 @@ export class FormComponent implements OnInit {
       'hobbies': new FormArray([]),
       'choiceR': new FormControl('Good')
     });
+
+    //Subscribe to Form Observables
+    this.signupForm.statusChanges.subscribe(
+      (value) => {
+        this.formStatus = value;
+      }
+    );
   }
 
   onSuggestUsername(){
