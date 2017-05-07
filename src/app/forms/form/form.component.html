@@ -52,7 +52,7 @@
     <div class="panel panel-default">
       <div class="panel-heading"><h4>Reactive Forms</h4></div>
       <div class="panel-body">
-        <form [formGroup]="signupForm">
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="username2">Username</label>
             <input type="text" class="form-control" id="username2" formControlName="username" />
@@ -67,7 +67,7 @@
               {{ choice }}
             </label>
           </div>
-          <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
     </div>

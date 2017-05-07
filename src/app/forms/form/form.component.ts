@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, NgForm } from "@angular/forms";
+import { FormControl, FormGroup, NgForm, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-form',
@@ -31,8 +31,8 @@ export class FormComponent implements OnInit {
 
   ngOnInit() {
     this.signupForm = new FormGroup({
-      'username': new FormControl(null),
-      'email': new FormControl(null),
+      'username': new FormControl(null, Validators.required),
+      'email': new FormControl(null, [Validators.required, Validators.email]),
       'choiceR': new FormControl('Good')
     });
   }
@@ -66,6 +66,10 @@ export class FormComponent implements OnInit {
     this.user.gender = data.value.userData.gender;
 
     this.theForm.reset();
+  }
+
+  onSubmit(){
+    console.log(this.signupForm.value)
   }
 
 }
