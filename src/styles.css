@@ -127,3 +127,25 @@ fieldset[disabled] .btn {
     transition: all 0.4s;
     font-weight: 400;
 }
+.loader{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.relative{
+  position: relative;
+}
+
+.absLoader{
+  position: absolute;
+  top: 26px;
+  right: 5px;
+}
+
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect{
+  fill: #FF6700;
+}
