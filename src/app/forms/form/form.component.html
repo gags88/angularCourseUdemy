@@ -81,6 +81,18 @@
               {{ choice }}
             </label>
           </div>
+          <div formArrayName="hobbies">
+            <div class="form-group">
+              <h5>Your Hobbies</h5>
+              <button class="btn btn-info" type="button" (click)="onAddNewHobby()">Add New Hobby</button>
+            </div>
+
+            <div class="form-group" *ngFor="let hobby of signupForm.get('hobbies').controls; let i=index">
+              <label></label>
+              <input type="text" class="form-control" [formControlName]="i">
+            </div>
+          </div>
+          <br/>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
