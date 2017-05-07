@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from "@angular/forms";
+import { FormControl, FormGroup, NgForm } from "@angular/forms";
 
 @Component({
   selector: 'app-form',
@@ -21,9 +21,20 @@ export class FormComponent implements OnInit {
     gender: ''
   }
 
+  /*--------Reactive Forms----------*/
+  choices = ['Good', 'Bad'];
+  signupForm: FormGroup;
+
+  /*--------Reactive Forms block Ends----------*/
+
   constructor() { }
 
   ngOnInit() {
+    this.signupForm = new FormGroup({
+      'username': new FormControl(null),
+      'email': new FormControl(null),
+      'choiceR': new FormControl('Good')
+    });
   }
 
   onSuggestUsername(){
