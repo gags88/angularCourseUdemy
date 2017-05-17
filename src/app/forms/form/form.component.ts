@@ -43,6 +43,8 @@ export class FormComponent implements OnInit {
       'choiceR': new FormControl('Good')
     });
 
+
+
     //Subscribe to Form Observables
     this.signupForm.statusChanges.subscribe(
       (value) => {
@@ -84,6 +86,15 @@ export class FormComponent implements OnInit {
 
   onSubmit(){
     console.log(this.signupForm);
+    this.signupForm.reset({
+      'username': '',
+      'email': '',
+      'ageData': {
+        'age': '',
+        'dob': '',
+      },
+      'hobbies': []
+    });
   }
 
   onAddNewHobby(){

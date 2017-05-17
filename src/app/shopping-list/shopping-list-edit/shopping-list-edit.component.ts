@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
-import { Ingredient } from "../../shared/ingredient.model";
-import { ShoppingListService } from "../shopping-list.service";
+import { Component, OnInit } from '@angular/core';
+import { Ingredient } from '../../shared/ingredient.model';
+import { ShoppingListService } from '../shopping-list.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-shopping-list-edit',
@@ -9,18 +10,23 @@ import { ShoppingListService } from "../shopping-list.service";
 })
 export class ShoppingListEditComponent implements OnInit {
 
-  @ViewChild('nameInput') nameInput: ElementRef;
-  @ViewChild('amountInput') amountInput: ElementRef;
+  // @ViewChild('nameInput') nameInput: ElementRef;
+  // @ViewChild('amountInput') amountInput: ElementRef;
   // @Output()
-  // ingredient = new EventEmitter<Ingredient>();  
+  // ingredient = new EventEmitter<Ingredient>();
 
-  constructor(private shoppingListService: ShoppingListService) { }
+  constructor(private shoppingListService: ShoppingListService) {
+  }
 
   ngOnInit() {
   }
 
-  onShoppingListAdd(){
-    const newIngredient = new Ingredient(this.nameInput.nativeElement.value,this.amountInput.nativeElement.value);
+  onShoppingListAdd(form: NgForm) {
+    // this.nameInput.nativeElement.value,this.amountInput.nativeElement.value
+    const name = form.value.name;
+    const amount = form.value.amount;
+    const newIngredient = new Ingredient(name, amount);
+    form.reset();
     this.shoppingListService.addIngredient(newIngredient);
     //this.ingredient.emit(newIngredient);
   }
