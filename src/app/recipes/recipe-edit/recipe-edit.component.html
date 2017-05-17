@@ -5,7 +5,7 @@
     <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
       <div class="form-group text-right">
         <button class="btn btn-primary" [disabled]="!recipeForm.valid">Save</button>
-        <button class="btn btn-danger">Cancel</button>
+        <button class="btn btn-danger" (click)="navigateToRecipePage()">Cancel</button>
       </div>
       <div class="form-group">
         <label for="name">Recipe Name</label>
