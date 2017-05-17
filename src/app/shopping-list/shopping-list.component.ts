@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import { Ingredient } from "../shared/ingredient.model";
-import { ShoppingListService } from "./shopping-list.service";
+import { Component, OnInit } from '@angular/core';
+import { Ingredient } from '../shared/ingredient.model';
+import { ShoppingListService } from './shopping-list.service';
 
 @Component({
   selector: 'app-shopping-list',
@@ -13,7 +13,8 @@ export class ShoppingListComponent implements OnInit {
   //   new Ingredient("Apples", 5),
   //   new Ingredient("Tomatoes", 10)
   // ];
-  constructor(private shoppingListService: ShoppingListService) { }
+  constructor(private shoppingListService: ShoppingListService) {
+  }
 
   ngOnInit() {
     this.ingredients = this.shoppingListService.getIngredients();
@@ -24,8 +25,12 @@ export class ShoppingListComponent implements OnInit {
     )
   }
 
+  onEditItem(id: number) {
+    this.shoppingListService.statedEditing.next(id);
+  }
+
   // onIngredientAdded(eventData: Ingredient){
-  //  this.ingredients.push(eventData)   
+  //  this.ingredients.push(eventData)
   // }
 
 }

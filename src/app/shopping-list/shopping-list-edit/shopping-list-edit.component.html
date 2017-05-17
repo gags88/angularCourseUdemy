@@ -11,19 +11,19 @@
         <div class="col-sm-2 form-group">
           <label for="amount">Amount</label>
           <!--<input type="number" id="amount" class="form-control" #amountInput>-->
-          <input type="number" id="amount" class="form-control" name="amount" ngModel required pattern="^[1-9]$"/>
+          <input type="number" id="amount" class="form-control" name="amount" ngModel required pattern="^[0-9]+$"/>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
           <!--<button type="submit" class="btn btn-success" (click)="onShoppingListAdd()">-->
           <button type="submit" class="btn btn-success" [disabled]="!form.valid">
-            Add
+            {{ editMode ? 'Update':'Add' }}
           </button>
-          <button type="button" class="btn btn-danger">
+          <button type="button" class="btn btn-danger" (click)="onDelete()" *ngIf="editMode">
             Delete
           </button>
-          <button type="reset" class="btn btn-default" [disabled]="!form.valid">
+          <button type="reset" class="btn btn-default" (click)="resetForm()" [disabled]="!form.valid">
             Reset
           </button>
         </div>
